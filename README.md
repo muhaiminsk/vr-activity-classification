@@ -9,7 +9,7 @@ This project aims to classify user activities in a VR game using neural networks
 
 ## Key Features
 - Data collection using Wireshark on Meta Quest Pro.
-- Neural network techniques (e.g., RNNs, Transformers) for activity classification.
+- Neural network techniques (e.g., RNNs) for activity classification.
 - Focused on network traffic analysis in a VR environment.
 
 ## Project Goals
