@@ -47,4 +47,4 @@ This project explores the possibility of identifying user activities in a VR gam
 
 
 ## Contact
-For questions or collaboration, please contact smuhaimi@nd.edu
+For questions or confusions, please contact smuhaimi@nd.edu
