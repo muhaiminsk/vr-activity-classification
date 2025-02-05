@@ -34,10 +34,9 @@ This project explores the possibility of identifying user activities in a VR gam
    - Network traffic is being recorded via Wireshark while performing predefined activities in the VR game.  
    - Data is collected using packet capture tools and stored as raw traffic logs.
   
-2. **Feature Extraction**
-
-- The dataset will include traffic-based features of UDP (User Datagram Protocol) network packets extracted for each activity interval. UDP is often used for time-sensitive applications like gaming, video playback, and DNS lookups.
-- The packet characteristics will be the key features which are: average size of packets per second, number of packets passed per second, and timing intervals between corresponding packets.   
+2. **Feature Extraction**  
+   - The dataset will include traffic-based features of UDP (User Datagram Protocol) network packets extracted for each activity interval. UDP is often used for time-sensitive applications like gaming, video playback, and DNS lookups.
+   - The packet characteristics will be the key features which are: average size of packets per second, number of packets passed per second, and timing intervals between corresponding packets.   
 
 3. **Labeling**  
    - Activities will be manually labeled for each second of gameplay based on the performed action.  
