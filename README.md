@@ -1,9 +1,9 @@
-# vr-activity-classification
+# VR Activity Classification
 Identifying user activities in a VR game using neural networks trained on network traffic data collected via Wireshark. The project involves analyzing features like packet count, inter-packet time, timestamps, and packet length.
 
 
 
-# VR Activity Classification
+# Part-1
 
 This project aims to classify user activities in a VR game using neural networks. Network traffic data collected via Wireshark will serve as input, leveraging features like packet count, inter-packet communication time, timestamps, and packet length.
 
