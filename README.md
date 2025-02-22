@@ -75,11 +75,16 @@ Features are aggregated (mostly averaged) at 1-second intervals. Additionally, t
 ### **Sample Data:** 
 Below is a snapshot of the processed dataset:  
 
-| Time (Seconds) | No. of Packets | No. of Bits | Activity  | Avg. Packet Length (Bytes) | Avg. Inter-packet Arrival Time |
-|----------------|----------------|-------------|-----------|-----------------------------|--------------------------------|
-| 94             | 68             | 111136      | Walking   | 204.2941176                | 0.013161765                   |
-| 95             | 70             | 115056      | Walking   | 204.5070423                | 0.012535211                   |
-| 96             | 72             | 113168      | Walking   | 196.4722222                | 0.013069444                   |
+| Time (Seconds) | No. of Packets | No. of Bits | Activity      | Avg. Packet Length (Bytes) | Avg. Inter-packet Arrival Time |
+|----------------|----------------|-------------|---------------|-----------------------------|--------------------------------|
+| 97             | 70             | 113840      | Walking       | 203.29                     | 0.0133                         |
+| 98             | 72             | 118064      | Walking       | 204.97                     | 0.0127                         |
+| 99             | 69             | 119128      | Walking       | 215.81                     | 0.0134                         |
+| 100            | 70             | 116816      | No Activity   | 208.60                     | 0.0131                         |
+| 163            | 70             | 110608      | No Activity   | 194.19                     | 0.0110                         |
+| 164            | 71             | 108120      | Talking       | 190.35                     | 0.0125                         |
+| 165            | 69             | 126520      | Talking       | 229.20                     | 0.0126                         |
+| 166            | 71             | 135008      | Talking       | 237.69                     | 0.0135                         |
 
 
 
