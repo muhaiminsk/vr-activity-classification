@@ -46,5 +46,46 @@ This project explores the possibility of identifying user activities in a VR gam
    - Traffic data will be segmented into one-second intervals, creating a structured dataset where each row corresponds to a single activity instance.  
 
 
+
+
+# Part-2: Datasets
+
+The dataset for the project was collected manually with the help of Wireshark on the Meta Quest Pro VR headset. Network traffic logs were recorded during performing various activities in the VR game GYM CLASS - BASKETBALL VR. Packet capture (PCAPNG) files and their processed counterparts in CSV format are included in the dataset. These processed files contain traffic-based features extracted for specific activity intervals, which I think will facilitate the training of neural network models.
+
+### **Activities:**
+As planned before in Part-1, I collected data and manually labeled samples of the following activities:
+
+- **Walking**
+- **Talking**
+- **Ball Throwing**
+- **Paused State**
+- **No Activity(Idle State)**
+
+### **Details of the features:**
+Each second of network traffic that is captured is considered a datapoint. The following characteristics are present in the processed dataset:
+
+- **Time (Seconds):** Recorded time for keeping track of starting and ending of an activity.
+- **No. of Bits:** The total number of bits that were transferred throughout the time frame.
+- **No. of Packets:** The total number of packets sent and received during the time frame.
+- **Average Packet Length (Bytes):** The average length of the interval's packets.
+- **Average Inter-Packet Arrival Time:** The average amount of time in the interval between consecutive packets.
+
+Features are aggregated (mostly averaged) at 1-second intervals. Additionally, the activities were manually labeled and tracked while they were being performed and recorded. The data was gathered in a regulated virtual reality setting (training mode) to remove player interference.
+
+### **Sample Data:** 
+Below is a snapshot of the processed dataset:  
+
+| Time (Seconds) | No. of Packets | No. of Bits | Activity  | Avg. Packet Length (Bytes) | Avg. Inter-packet Arrival Time |
+|----------------|----------------|-------------|-----------|-----------------------------|--------------------------------|
+| 94             | 68             | 111136      | Walking   | 204.2941176                | 0.013161765                   |
+| 95             | 70             | 115056      | Walking   | 204.5070423                | 0.012535211                   |
+| 96             | 72             | 113168      | Walking   | 196.4722222                | 0.013069444                   |
+
+
+
+### **Drive link of Dataset:** https://drive.google.com/drive/folders/1pI8XeaFCjSOEUK7IC5u5HBcOUWC2gaCw?usp=sharing
+
+
+
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
