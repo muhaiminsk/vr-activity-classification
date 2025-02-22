@@ -90,7 +90,7 @@ Below is a snapshot of the processed dataset:
 
 ### **Drive link of Dataset:** https://drive.google.com/drive/folders/1pI8XeaFCjSOEUK7IC5u5HBcOUWC2gaCw?usp=sharing
 
-
+To facilitate efficient training, hyperparameter tuning, and final evaluation, the dataset is then divided into subsets for training (60%) validation (20%) and testing (20%). Using the existing features, a neural network model (such as an RNN) will first be trained to classify activities. Additional statistical features like variance, mean, and patterns from packet data will be added to the model to improve its predictive accuracy if its performance is subpar. For better outcomes, feature engineering and model tuning will be improved through this iterative process.
 
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
