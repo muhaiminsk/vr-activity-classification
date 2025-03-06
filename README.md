@@ -96,7 +96,9 @@ To facilitate efficient training, hyperparameter tuning, and final evaluation, t
 
 Using network traffic data recorded before while performing different tasks in virtual reality (VR) environments, this project focuses on activity recognition. Features such as time, the number of packets, the number of bits, average packet length, average inter-packet arrival time, and associated activity labels were included in the dataset. The objective was to create a classification model that can use these features to predict activities with accuracy. 
 
-Data preprocessing, model development with hyperparameter tuning, and evaluation on test data that hasn't been seen yet are all part of the workflow. Python libraries like Scikit-learn, Pandas, and TensorFlow/Keras are the main tools used in the code implementation. Dataset preparation, feature scaling, label encoding, Keras Tuner hyperparameter optimization, and model evaluation are important processes. The current findings show that there has been progress in creating a deep learning model with a respectable level of accuracy; however, there are still difficulties in optimizing and resolving problems with data quality.
+Data preprocessing, model development with hyperparameter tuning, and evaluation on test data that hasn't been seen yet are all part of the workflow. Python libraries like Scikit-learn, Pandas, and TensorFlow/Keras are the main tools used in the code implementation. Dataset preparation, feature scaling, label encoding, Keras Tuner hyperparameter optimization, and model evaluation are important processes. The current findings show that there has been progress in creating a deep learning model with a respectable level of accuracy; however, there are still difficulties in optimizing and resolving problems with data quality. The code can be found here:
+
+https://github.com/muhaiminsk/vr-activity-classification/blob/e882a1402d5623a92d0b26834d8a77792690ff84/VR_Activity_classf.ipynb
 
 ### **Challenges Encountered**
 ### **Imbalance and Data Quality:**
