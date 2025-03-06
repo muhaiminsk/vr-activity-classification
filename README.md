@@ -101,22 +101,22 @@ Data preprocessing, model development with hyperparameter tuning, and evaluation
 https://github.com/muhaiminsk/vr-activity-classification/blob/e882a1402d5623a92d0b26834d8a77792690ff84/VR_Activity_classf.ipynb
 
 ### **Challenges Encountered**
-**Imbalance and Data Quality:**
+**1. Imbalance and Data Quality:**
 Although there are several activity classes in the dataset, their distributions are not uniform. While "Talking" and "Ball Throwing" have fewer samples, "No Activity" and "Paused" are overrepresented. The model's capacity to generalize across all classes is impacted by this imbalance. Although employing class-weight adjustments, oversampling, or undersampling may be beneficial, it has proven difficult to do so without adding bias.
 
-**Feature Engineering:**
+**2. Feature Engineering:**
 Although the numerical features offer a foundation for categorization, there is limited direct interpretability in them. Numerical stability is ensured through standardization using Scikit-learn's StandardScaler; however, more research is needed to fully understand the relationship between features and activities. Developing domain-specific features or transforming existing ones to better capture activity nuances has proven difficult.
 
-**Tuning Hyperparameters:**
+**3. Tuning Hyperparameters:**
 Although the Hyperband algorithm of the Keras Tuner is useful for exploring hyperparameter space, there is a considerable computational overhead. Several training iterations are needed to adjust the number of units in hidden layers and learning rates in the experiments. Even though GPUs are readily available, the time required for validation and tuning causes delays in achieving ideal configurations.
 
-**Generalization of the Model:**
+**4. Generalization of the Model:**
 According to preliminary assessments, the model does well on the training set but has trouble staying accurate on the test data. There is clear overfitting, particularly for some classes with small datasets. To lessen this problem, strategies like dropout regularization and simplifying the model are being explored.
 
-**Data Preprocessing for Test Sets:**
+**5. Data Preprocessing for Test Sets:**
 It is essential that training and test datasets be consistent. However, errors can occasionally arise from differences in label encoding and feature scaling during preprocessing. Careful monitoring of preprocessing pipelines is necessary to guarantee that the transformations for the two datasets are identical.
 
-**Interpretation of Output:**
+**6. Interpretation of Output:**
 Complexity is added when predictions are mapped to labels that are readable by humans. The process needs to be smooth and error-free to prevent output file inconsistencies.
 
 ### **Initial Findings**
