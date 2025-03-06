@@ -92,5 +92,50 @@ Below is a snapshot of the processed dataset:
 
 To facilitate efficient training, hyperparameter tuning, and final evaluation, the dataset is then divided into subsets for training (60%) validation (20%) and testing (20%). Using the existing features, a neural network model (such as an RNN) will first be trained to classify activities. Additional statistical features like variance, mean, and patterns from packet data will be added to the model to improve its predictive accuracy if its performance is subpar. For better outcomes, feature engineering and model tuning will be improved through this iterative process.
 
+# Part-3: First update
+
+Using network traffic data recorded before while performing different tasks in virtual reality (VR) environments, this project focuses on activity recognition. Features such as time, the number of packets, the number of bits, average packet length, average inter-packet arrival time, and associated activity labels were included in the dataset. The objective was to create a classification model that can use these features to predict activities with accuracy. 
+
+Data preprocessing, model development with hyperparameter tuning, and evaluation on test data that hasn't been seen yet are all part of the workflow. Python libraries like Scikit-learn, Pandas, and TensorFlow/Keras are the main tools used in the code implementation. Dataset preparation, feature scaling, label encoding, Keras Tuner hyperparameter optimization, and model evaluation are important processes. The current findings show that there has been progress in creating a deep learning model with a respectable level of accuracy; however, there are still difficulties in optimizing and resolving problems with data quality.
+
+### **Challenges Encountered**
+### **Imbalance and Data Quality:**
+Although there are several activity classes in the dataset, their distributions are not uniform. While "Talking" and "Ball Throwing" have fewer samples, "No Activity" and "Paused" are overrepresented. The model's capacity to generalize across all classes is impacted by this imbalance. Although employing class-weight adjustments, oversampling, or undersampling may be beneficial, it has proven difficult to do so without adding bias.
+
+### **Feature Engineering:**
+Although the numerical features offer a foundation for categorization, there is limited direct interpretability in them. Numerical stability is ensured through standardization using Scikit-learn's StandardScaler; however, more research is needed to fully understand the relationship between features and activities. Developing domain-specific features or transforming existing ones to better capture activity nuances has proven difficult.
+
+### **Tuning Hyperparameters:**
+Although the Hyperband algorithm of the Keras Tuner is useful for exploring hyperparameter space, there is a considerable computational overhead. Several training iterations are needed to adjust the number of units in hidden layers and learning rates in the experiments. Even though GPUs are readily available, the time required for validation and tuning causes delays in achieving ideal configurations.
+
+### **Generalization of the Model:**
+According to preliminary assessments, the model does well on the training set but has trouble staying accurate on the test data. There is clear overfitting, particularly for some classes with small datasets. To lessen this problem, strategies like dropout regularization and simplifying the model are being explored.
+
+### **Data Preprocessing for Test Sets:**
+It is essential that training and test datasets be consistent. However, errors can occasionally arise from differences in label encoding and feature scaling during preprocessing. Careful monitoring of preprocessing pipelines is necessary to guarantee that the transformations for the two datasets are identical.
+
+### **Interpretation of Output:**
+Complexity is added when predictions are mapped to labels that are readable by humans. The process needs to be smooth and error-free to prevent output file inconsistencies.
+
+### **Initial Findings**
+The accuracy of the current model is 95.4% on validation data, and it shows a consistent improvement over 50 training epochs. On test data, however, performance is roughly 68%, raising concerns about overfitting. The most frequently misclassified activities are those with fewer samples, like "Talking" and "Ball Throwing." "No Activity" and other dominant classes have more accurate predictions. These results highlight the need for improved feature refinement and management of class imbalance.
+
+
+
+
+### **Next Actions**
+To solve the issues found and enhance the project's outcome, I plan to implement the following tasks:
+
+1. Analyzing the features' distribution and significance in predicting various activities by conducting statistical analyses. By doing this, the feature set can be improved for better model training by identifying features that are redundant or less informative.
+2. Creating strong evaluation metrics, such as F1-score, precision, and recall, to give a thorough picture of model performance in all classes, particularly underrepresented ones.
+3. This issue of predicted activity readibility can be resolved by inverse label encoder transformations, but in order to avoid inconsistent output files, the procedure must be seamless and error-free.
+
+
+
+
+
+
+
+
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
