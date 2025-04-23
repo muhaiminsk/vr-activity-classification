@@ -131,10 +131,37 @@ To solve the issues found and enhance the project's outcome, I plan to implement
 
 
 
+# Part-4: Second update
+### **Improving Generalization with SMOTE:**
+
+By using SMOTE (Synthetic Minority Oversampling Technique) and improving the neural network architecture, I tried to address class imbalance and enhance model generalization. Although the original model's test accuracy was 74.95%, it displayed overfitting (training accuracy: 87.77%, validation accuracy: 67.74%).
+
+Important modifications consist of:
 
 
+Class Balancing: To address dataset imbalance, use SMOTE from the imbalanced-learn library.
 
+Hyperparameter tuning: enlarged search space for learning rates (1e-3 to 1e-4) and hidden layer units (64-256).
 
+### **Challenges Encountered**
+**1. Validation accuracy collapse:** 
+Validation accuracy collapsed to 0% as a result of a custom SMOTE implementation because of
+a) Incorrect tensor operations when creating synthetic samples.
+b) Incorrect binary classification configuration (using sigmoid activation rather than softmax).
+
+So, as a probable fix, the battle-tested imbalanced-learn SMOTE implementation was used as a solution and it helped.
+
+**2. Leakage of Validation Data:** 
+
+Performance was artificially inflated by the initial SMOTE application, which included both training and validation data. So, before using SMOTE on synthetic data, training and validation splits were separated as a fix.
+
+**3. Unstable Hyperparameters:**
+
+At first, larger architectures (256 units) produced unpredictable loss behavior. So, I lessened the learning rate search space and added gradient clipping.
+
+**4. Misunderstanding of the class:**
+
+Due to lingering imbalance, minority classes ("Ball Throwing", "Talking") were commonly misclassified. As an enhancement, SMOTE and class-weighted loss functions were combined.
 
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
