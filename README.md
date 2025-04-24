@@ -163,5 +163,19 @@ At first, larger architectures (256 units) produced unpredictable loss behavior.
 
 Due to lingering imbalance, minority classes ("Ball Throwing", "Talking") were commonly misclassified. As an enhancement, SMOTE and class-weighted loss functions were combined.
 
+
+### **How to Run:**
+Files: (All files are pushed to the git)
+
+Train: train_merged.csv 
+
+Test: test_vrclass_2.csv 
+
+Code: Demo_VR_Activity_classf.ipynb = https://colab.research.google.com/drive/1BWVUEJ-G_8Vm7XP5q6oWq5cjjv4f5sh3?usp=sharing
+
+1. Run first cell for requirements
+2. Run Second cell for the main training and results
+3. First provide the training file (train_merged.csv) when asked.
+4. Then provide the testing file (test_vrclass_2.csv) when asked.
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
