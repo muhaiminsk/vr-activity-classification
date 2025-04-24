@@ -164,17 +164,8 @@ At first, larger architectures (256 units) produced unpredictable loss behavior.
 Due to lingering imbalance, minority classes ("Ball Throwing", "Talking") were commonly misclassified. As an enhancement, SMOTE and class-weighted loss functions were combined.
 
 ### ** Evaluation:**
-Classification Report:
-              precision    recall  f1-score   support
 
- No Activity       0.94      0.83      0.88       300
-      Paused       0.69      1.00      0.82        34
-     Talking       0.58      0.99      0.73        95
-     Walking       0.57      0.26      0.35        82
-
-    accuracy                           0.78       511
-   macro avg       0.70      0.77      0.70       511
-weighted avg       0.80      0.78      0.76       511
+<img width="504" alt="Screenshot 2025-04-24 at 1 36 00 AM" src="https://github.com/user-attachments/assets/5b532741-d69a-42c3-8121-55382fe9ec3e" />
 
 **Confusion matrix:**
 
