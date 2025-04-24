@@ -165,6 +165,8 @@ Due to lingering imbalance, minority classes ("Ball Throwing", "Talking") were c
 
 ### ** Evaluation:**
 
+Training Accuracy is 85.58% and Validation Accuracy 62.20%.
+
 <img width="504" alt="Screenshot 2025-04-24 at 1 36 00 AM" src="https://github.com/user-attachments/assets/5b532741-d69a-42c3-8121-55382fe9ec3e" />
 
 **Confusion matrix:**
@@ -181,6 +183,13 @@ Due to lingering imbalance, minority classes ("Ball Throwing", "Talking") were c
 Precision/Recall/F1: Critical for imbalanced classes (e.g., "Walking" vs "No Activity") to measure true class-specific performance beyond accuracy.
 
 Confusion Matrix: Identifies misclassification patterns (e.g., "Walking" confused with "No Activity").
+
+### **Analysis and Short Commentary**
+Training Accuracy (85.58%) being larger than Validation Accuracy (62.20%) points to overfitting which means model memorizes training data but fails to generalize. This is happening likely due to insufficient regularization and class imbalance. There is room for improvement in this area.
+
+Test Accuracy (77.69%) indicates good performance on majority classes (No Activity, Paused).But it fails somewhat when it comes to minority classes (Walking: 35% F1). Current features likely lack discriminative power for Walking.
+
+
 ### **How to Run:**
 Files: (All files are pushed to the git)
 
