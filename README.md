@@ -176,9 +176,12 @@ Classification Report:
    macro avg       0.70      0.77      0.70       511
 weighted avg       0.80      0.78      0.76       511
 
+**Confusion matrix:**
 
 
-Confusion matrix:
+
+
+
 ![conf_mat](https://github.com/user-attachments/assets/114d0c53-62aa-446e-af2b-9720ceffef04)
 
 
