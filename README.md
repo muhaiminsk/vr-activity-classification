@@ -262,28 +262,30 @@ The processed dataset consists of structured rows where each row represents a si
 | 166            | 71             | 135008      | Talking       | 237.69                     | 0.0135                         |
 
 **Details**
-- **Total Samples: 5,781
+- Total Samples: 5,781
 
 **Splits:**
 
-- **Training: 5,348 samples (92.5% of total data, including validation).
+- Training: 5,348 samples (92.5% of total data, including validation).
 
-- **Validation: 1,069 samples (18.5% of total data, extracted from training).
+- Validation: 1,069 samples (18.5% of total data, extracted from training).
 
-- **Test: 433 samples (7.5% of total data).
+- Test: 433 samples (7.5% of total data).
 
 **Test Set Class Distribution:**
 
 **Activity	Proportion:**
-- **No Activity	65.4%
-- **Talking	10.4%
-- **Ball Throwing	8.8%
-- **Walking	7.9%
-- **Paused	7.6%
+- No Activity	65.4%
+- Talking	10.4%
+- Ball Throwing	8.8%
+- Walking	7.9%
+- Paused	7.6%
 
 **Key Differences from Training/Validation:**
 1. Extreme imbalance exists in the test set; walking and pausing are relatively rare, whereas no activity predominates at 65.4%.
 2. The test set represents raw real-world distributions, whereas the training data consists of synthetic SMOTE-augmented samples for minority groups.
 3. Gameplay sessions captured during model training are included in the test data, which introduces hidden network patterns (such as variations in server latency).
+
+
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
