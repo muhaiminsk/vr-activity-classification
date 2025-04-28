@@ -296,6 +296,8 @@ The processed dataset consists of structured rows where each row represents a si
 
 **Neural Network Architecture:**
 TensorFlow/Keras was used to create a Recurrent Neural Network (RNN). Key characteristics:
+
+
 -**Input Layer:** Scaled features are processed by the input layer.
 
 -**Hidden Layers:** Enhanced through hyperparameter tuning using the Hyperband method of the Keras Tuner.
