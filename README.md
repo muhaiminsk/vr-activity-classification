@@ -286,6 +286,21 @@ The processed dataset consists of structured rows where each row represents a si
 2. The test set represents raw real-world distributions, whereas the training data consists of synthetic SMOTE-augmented samples for minority groups.
 3. Gameplay sessions captured during model training are included in the test data, which introduces hidden network patterns (such as variations in server latency).
 
+### **Model Development**
+
+**Preprocessing:**
+1. Scaling: For numerical stability, features were standardized using StandardScaler.
+2. Encoding: To ensure model compatibility, activity labels were encoded.
+3. Balancing: SMOTE (Synthetic Minority Oversampling Technique) wasc used to address class imbalance.
+
+
+**Neural Network Architecture:**
+TensorFlow/Keras was used to create a Recurrent Neural Network (RNN). Key characteristics:
+-**Input Layer:** Scaled features are processed by the input layer.
+
+-**Hidden Layers:** Enhanced through hyperparameter tuning using the Hyperband method of the Keras Tuner.
+
+-**Output Layer:** Uses a softmax activation function to predict activity types.
 
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
