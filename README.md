@@ -203,5 +203,37 @@ Code: Demo_VR_Activity_classf.ipynb = https://colab.research.google.com/drive/1B
 2. Run Second cell for the main training and results
 3. First provide the training file (train_merged.csv) when asked.
 4. Then provide the testing file (test_vrclass_2.csv) when asked.
+
+
+
+# VR Activity Classification Final Report
+
+### **Project Overview**
+
+The goal of this project is to use neural networks trained on network traffic data to classify user activities in the VR game GYM CLASS-BASKETBALL VR. The selected game offers a controlled environment for gathering data. Targeted activities include talking, walking, throwing a ball, pausing, and No Activity (Idle). A neural network model is trained using network traffic features that are taken from Wireshark records, such as packet count, inter-packet time, timestamps, and packet length. Analyzing network traffic in virtual reality settings provides a fresh perspective on user behavior. This study investigates the viability of employing neural networks trained on Wireshark-captured network traffic data to recognize VR gaming actions. The test set's final results, difficulties encountered, and suggested enhancements are compiled in this final report.
+
+
+### **Objectives**
+The primary objectives of this work were:
+
+1. Dataset Development: Creating a trainable dataset of VR network traffic data manually labeled with corresponding user activities.
+
+2. Neural Network Training: Training models such as Recurrent Neural Networks (RNNs) to classify VR activities.
+
+3. Performance Analysis: Using metrics like accuracy, precision, recall, and F1-score to evaluate the effectiveness of the proposed model.
+
+### **Methodology**
+
+**Data Collection:**
+
+While engaging in specific game activities, Wireshark was used to record network traffic data on a Meta Quest Pro VR headset. In order to remove outside interference from multiplayer interactions, the training mode of the game was selected. Among the activities were:
+
+- **Walking**
+- **Talking**
+- **Ball Throwing**
+- **Paused State**
+- **No Activity(Idle State)**
+
+
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
