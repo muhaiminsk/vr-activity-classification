@@ -304,5 +304,16 @@ TensorFlow/Keras was used to create a Recurrent Neural Network (RNN). Key charac
 
 -**Output Layer:** Uses a softmax activation function to predict activity types.
 
+
+**Tuning Hyperparameters:**
+The hyperparameters listed below were optimized:
+
+-Number of hidden units: 64–256
+
+-Learning rate: 1e-3–1e-4
+
+-Dropout rate: 0.2–0.5
+
+
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
