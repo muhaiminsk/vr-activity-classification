@@ -234,6 +234,23 @@ While engaging in specific game activities, Wireshark was used to record network
 - **Paused State**
 - **No Activity(Idle State)**
 
+Packet Capture (PCAPNG) files were used to capture network traffic, and these files were later converted to CSV format. Every gaming second represents a data point or, a sample, with features manually retrieved and categorized.
+
+**Feature Extraction:**
+UDP (User Datagram Protocol) packets, which are frequently utilized for time-sensitive applications like gaming, were used to derive the following characteristics:
+
+- **Time (Seconds):** Recorded time for keeping track of starting and ending of an activity.
+- **No. of Bits:** The total number of bits sent over the period.
+- **No. of Packets:** The total number of packets sent or received during a specific period of time.
+- **Average Packet Length (Bytes):** The average packet size during a certain period of time. Average Packet Length is calculated as the mean of all packet lengths in a given interval (mean = sum(packet lengths) / total packets).
+- **Average Inter-Packet Arrival Time:** The average amount of time that passes between successive packets. Average Inter-Packet Arrival Time is derived by calculating the mean of these recorded inter-packet times over the specified interval (mean = sum(inter-packet times) / total inter-packet intervals).
+
+Data is divided into 1-second windows (e.g., 12:30:45.000000 to 12:30:46.000000 with the objective of treating each interval as a single data point.At one-second intervals, each feature was aggregated (averaged). During gameplay, this structured dataset was manually labeled and saved for analysis.
+
+##**Dataset**
+The processed dataset consists of structured rows where each row represents a single second of gameplay:
+
+
 
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
