@@ -298,11 +298,9 @@ The processed dataset consists of structured rows where each row represents a si
 TensorFlow/Keras was used to create a Recurrent Neural Network (RNN). Key characteristics:
 
 
--**Input Layer:** Scaled features are processed by the input layer.
-
--**Hidden Layers:** Enhanced through hyperparameter tuning using the Hyperband method of the Keras Tuner.
-
--**Output Layer:** Uses a softmax activation function to predict activity types.
+- **Input Layer:** Scaled features are processed by the input layer.
+- **Hidden Layers:** Enhanced through hyperparameter tuning using the Hyperband method of the Keras Tuner.
+- **Output Layer:** Uses a softmax activation function to predict activity types.
 
 
 **Tuning Hyperparameters:**
