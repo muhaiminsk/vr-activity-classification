@@ -240,17 +240,50 @@ Packet Capture (PCAPNG) files were used to capture network traffic, and these fi
 UDP (User Datagram Protocol) packets, which are frequently utilized for time-sensitive applications like gaming, were used to derive the following characteristics:
 
 - **Time (Seconds):** Recorded time for keeping track of starting and ending of an activity.
-- **No. of Bits:** The total number of bits sent over the period.
-- **No. of Packets:** The total number of packets sent or received during a specific period of time.
+- **No. of Bits:** The sum or, total number of bits sent over the period.
+- **No. of Packets:** The sum or, total number of packets sent or received during a specific period of time.
 - **Average Packet Length (Bytes):** The average packet size during a certain period of time. Average Packet Length is calculated as the mean of all packet lengths in a given interval (mean = sum(packet lengths) / total packets).
 - **Average Inter-Packet Arrival Time:** The average amount of time that passes between successive packets. Average Inter-Packet Arrival Time is derived by calculating the mean of these recorded inter-packet times over the specified interval (mean = sum(inter-packet times) / total inter-packet intervals).
 
-Data is divided into 1-second windows (e.g., 12:30:45.000000 to 12:30:46.000000 with the objective of treating each interval as a single data point.At one-second intervals, each feature was aggregated (averaged). During gameplay, this structured dataset was manually labeled and saved for analysis.
+Data is divided into 1-second windows (e.g., 12:30:45.000000 to 12:30:46.000000) with the objective of treating each interval as a single data point.At one-second intervals, each feature was aggregated (averaged). During gameplay, this structured dataset was manually labeled and saved for analysis.
 
 ##**Dataset**
 The processed dataset consists of structured rows where each row represents a single second of gameplay:
 
+| Time (Seconds) | No. of Packets | No. of Bits | Activity      | Avg. Packet Length (Bytes) | Avg. Inter-packet Arrival Time |
+|----------------|----------------|-------------|---------------|-----------------------------|--------------------------------|
+| 97             | 70             | 113840      | Walking       | 203.29                     | 0.0133                         |
+| 98             | 72             | 118064      | Walking       | 204.97                     | 0.0127                         |
+| 99             | 69             | 119128      | Walking       | 215.81                     | 0.0134                         |
+| 100            | 70             | 116816      | No Activity   | 208.60                     | 0.0131                         |
+| 163            | 70             | 110608      | No Activity   | 194.19                     | 0.0110                         |
+| 164            | 71             | 108120      | Talking       | 190.35                     | 0.0125                         |
+| 165            | 69             | 126520      | Talking       | 229.20                     | 0.0126                         |
+| 166            | 71             | 135008      | Talking       | 237.69                     | 0.0135                         |
 
+**Details**
+- **Total Samples: 5,781
 
+**Splits:**
+
+- **Training: 5,348 samples (92.5% of total data, including validation).
+
+- **Validation: 1,069 samples (18.5% of total data, extracted from training).
+
+- **Test: 433 samples (7.5% of total data).
+
+**Test Set Class Distribution:**
+
+**Activity	Proportion:**
+- **No Activity	65.4%
+- **Talking	10.4%
+- **Ball Throwing	8.8%
+- **Walking	7.9%
+- **Paused	7.6%
+
+**Key Differences from Training/Validation:**
+1. Extreme imbalance exists in the test set; walking and pausing are relatively rare, whereas no activity predominates at 65.4%.
+2. The test set represents raw real-world distributions, whereas the training data consists of synthetic SMOTE-augmented samples for minority groups.
+3. Gameplay sessions captured during model training are included in the test data, which introduces hidden network patterns (such as variations in server latency).
 ## Contact
 For questions or confusions, please contact smuhaimi@nd.edu
