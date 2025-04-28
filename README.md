@@ -310,6 +310,27 @@ The hyperparameters listed below were optimized:
 - Learning rate: 1e-3–1e-4
 - Dropout rate: 0.2–0.5
 
+### **Challenges Encountered**
+**Unbalanced Data:**
+There were notable class disparities in the sample, with "No Activity" and "Paused State" being overrepresented. Due to a lack of samples, minority classes such as "Talking" and "Ball Throwing" produced biased model predictions.
+
+Solution: SMOTE was used as a solution to artificially oversample minority classes. Although this lessened imbalance, it also brought about computational difficulties and sporadic collapses in validation accuracy.
+
+**Feature Engineering:**
+It was not possible to immediately evaluate features obtained from network traffic. While standardization guaranteed stability, it is still difficult to find more domain-specific characteristics.
+
+
+Future work: To find latent correlations, investigate sophisticated feature transformations and statistical analyses.
+
+
+**Overfitting:**
+Early models had lower test accuracy because they had trouble generalizing after doing well on training data.
+
+Solution: To lessen overfitting, regularization strategies like dropout were implemented and model complexity was decreased.
+
+
+
+
 
 
 
