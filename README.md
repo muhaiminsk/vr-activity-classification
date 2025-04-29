@@ -316,7 +316,7 @@ The hyperparameters listed below were optimized:
 ### **Test Results**
 
 **Evaluation Metrics**
-- **Test Accuracy**: The average of the overall accuracy.
+- **Improved Test Accuracy**: The average of the overall accuracy.
 - **Macro F1**: Unweighted average of F1-scores across all classes.  
 - **Weighted F1**: F1-score averaged by class support (accounts for imbalance).  
 
@@ -338,7 +338,7 @@ The hyperparameters listed below were optimized:
 | **Talking**       | 0.52      | 0.71   | 0.60     |
 | **Walking**       | 0.31      | 0.24   | 0.27     |
 
-**Confusion Matrix**
+**Updated Confusion Matrix**(with 5 classes)
 
 
 ![download (2)](https://github.com/user-attachments/assets/af1b9642-524c-45de-b979-9c7bcf2fc2df)
