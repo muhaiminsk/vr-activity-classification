@@ -310,31 +310,6 @@ The hyperparameters listed below were optimized:
 - Learning rate: 1e-3–1e-4
 - Dropout rate: 0.2–0.5
 
-### **Challenges Encountered**
-1. **Unbalanced Data:**
-There were notable class disparities in the sample, with "No Activity" and "Paused State" being overrepresented. Due to a lack of samples, minority classes such as "Talking" and "Ball Throwing" produced biased model predictions.
-
-Solution: SMOTE was used as a solution to artificially oversample minority classes. Although this lessened imbalance, it also brought about computational difficulties and sporadic collapses in validation accuracy.
-
-2. **Feature Engineering:**
-It was not possible to immediately evaluate features obtained from network traffic. While standardization guaranteed stability, it is still difficult to find more domain-specific characteristics.
-
-Future work: To find latent correlations, investigate sophisticated feature transformations and statistical analyses.
-
-3. **Overfitting:**
-Early models had lower test accuracy because they had trouble generalizing after doing well on training data.
-
-Solution: To lessen overfitting, regularization strategies like dropout were implemented and model complexity was decreased.
-
-4. **Computational Overheads:**
-Extensive computational resources were needed for hyperparameter adjustment with the Keras Tuner, which delayed testing.
-
-Solution: For quicker iterations, use GPU acceleration and a constrained hyperparameter search space.
-
- 
-5. **Preprocessing Consistency:** Errors occasionally occurred as a result of different preprocessing procedures used for training and testing datasets.
-
-Solution: Automated validation tests and standardized preprocessing methods were the solutions.
 
 
 
@@ -367,6 +342,38 @@ Solution: Automated validation tests and standardized preprocessing methods were
 
 
 ![download (2)](https://github.com/user-attachments/assets/af1b9642-524c-45de-b979-9c7bcf2fc2df)
+
+
+
+
+
+
+
+### **Challenges Encountered**
+1. **Unbalanced Data:**
+There were notable class disparities in the sample, with "No Activity" and "Paused State" being overrepresented. Due to a lack of samples, minority classes such as "Talking" and "Ball Throwing" produced biased model predictions.
+
+Solution: SMOTE was used as a solution to artificially oversample minority classes. Although this lessened imbalance, it also brought about computational difficulties and sporadic collapses in validation accuracy.
+
+2. **Feature Engineering:**
+It was not possible to immediately evaluate features obtained from network traffic. While standardization guaranteed stability, it is still difficult to find more domain-specific characteristics.
+
+Future work: To find latent correlations, investigate sophisticated feature transformations and statistical analyses.
+
+3. **Overfitting:**
+Early models had lower test accuracy because they had trouble generalizing after doing well on training data.
+
+Solution: To lessen overfitting, regularization strategies like dropout were implemented and model complexity was decreased.
+
+4. **Computational Overheads:**
+Extensive computational resources were needed for hyperparameter adjustment with the Keras Tuner, which delayed testing.
+
+Solution: For quicker iterations, use GPU acceleration and a constrained hyperparameter search space.
+
+ 
+5. **Preprocessing Consistency:** Errors occasionally occurred as a result of different preprocessing procedures used for training and testing datasets.
+
+Solution: Automated validation tests and standardized preprocessing methods were the solutions.
 
 
 
