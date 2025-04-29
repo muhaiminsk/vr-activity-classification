@@ -187,7 +187,7 @@ Confusion Matrix: Identifies misclassification patterns (e.g., "Walking" confuse
 ### **Analysis and Short Commentary**
 Validation Accuracy (85.58%) being larger than Test Accuracy (62.20%) points to overfitting which means model memorizes training data but fails to generalize. This is happening likely due to insufficient regularization and class imbalance. There is room for improvement in this area.
 
-Test Accuracy (77.69%) indicates good performance on majority classes (No Activity, Paused).But it fails somewhat when it comes to minority classes (Walking: 35% F1). Current features likely lack discriminative power for Walking.
+Test Accuracy (62.20%) indicates good performance on majority classes (No Activity, Paused).But it fails somewhat when it comes to minority classes (Walking: 35% F1). Current features likely lack discriminative power for Walking.
 
 
 ### **How to Run:**
