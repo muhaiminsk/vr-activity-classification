@@ -376,7 +376,9 @@ Solution: For quicker iterations, use GPU acceleration and a constrained hyperpa
 Solution: Automated validation tests and standardized preprocessing methods were the solutions.
 
 
-
+### **Conclusion**
+This experiment shows how network traffic analysis may be used to identify VR activities. The findings demonstrate the viability of categorizing activities according to traffic characteristics, notwithstanding ongoing issues with data imbalance and model generalization. Additional study may strengthen the model's resilience and expand its use in other VR scenarios.onclusion
+This experiment shows how network traffic analysis may be used to identify VR activities. The findings demonstrate the viability of categorizing activities according to traffic characteristics, notwithstanding ongoing issues with data imbalance and model generalization. Additional study may strengthen the model's resilience and expand its use in other VR scenarios.
 
 
 
