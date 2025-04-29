@@ -193,9 +193,9 @@ Test Accuracy (62.20%) indicates good performance on majority classes (No Activi
 ### **How to Run:**
 Files: (All files are pushed to the git)
 
-Train: train_merged.csv 
+Train: VR_training.csv 
 
-Test: test_vrclass_2.csv 
+Test: vr_test.csv 
 
 Code: Demo_VR_Activity_classf.ipynb = https://colab.research.google.com/drive/1BWVUEJ-G_8Vm7XP5q6oWq5cjjv4f5sh3?usp=sharing
 
