@@ -319,17 +319,24 @@ Solution: SMOTE was used as a solution to artificially oversample minority class
 2. **Feature Engineering:**
 It was not possible to immediately evaluate features obtained from network traffic. While standardization guaranteed stability, it is still difficult to find more domain-specific characteristics.
 
-
 Future work: To find latent correlations, investigate sophisticated feature transformations and statistical analyses.
-
 
 3. **Overfitting:**
 Early models had lower test accuracy because they had trouble generalizing after doing well on training data.
 
 Solution: To lessen overfitting, regularization strategies like dropout were implemented and model complexity was decreased.
 
+4. **Computational Overheads:**
+Extensive computational resources were needed for hyperparameter adjustment with the Keras Tuner, which delayed testing.
 
+Solution: For quicker iterations, use GPU acceleration and a constrained hyperparameter search space.
 
+ 
+5. **Preprocessing Consistency:**
+
+Errors occasionally occurred as a result of different preprocessing procedures used for training and testing datasets.
+
+Solution: Automated validation tests and standardized preprocessing methods were the solutions.
 
 
 
