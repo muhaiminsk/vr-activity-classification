@@ -338,7 +338,40 @@ Solution: Automated validation tests and standardized preprocessing methods were
 
 
 
+### **Test Results**
 
+**Evaluation Metrics**
+
+| Metric             | Value   |
+|--------------------|---------|
+| Test Accuracy      | 77.37%  |
+| Macro F1-Score     | 69%     |
+| Weighted F1-Score  | 77%     |
+
+
+
+**Class-Specific Performance**
+
+| Activity        | Precision | Recall | F1-Score |
+|-----------------|-----------|--------|----------|
+| **Ball Throwing** | 0.79      | 1.00   | 0.88     |
+| **No Activity**   | 0.89      | 0.79   | 0.84     |
+| **Paused**        | 0.75      | 1.00   | 0.86     |
+| **Talking**       | 0.52      | 0.71   | 0.60     |
+| **Walking**       | 0.31      | 0.24   | 0.27     |
+
+**Confusion Matrix**
+
+
+![download (2)](https://github.com/user-attachments/assets/af1b9642-524c-45de-b979-9c7bcf2fc2df)
+
+
+
+
+**Notes**:  
+
+- **Macro F1**: Unweighted average of F1-scores across all classes.  
+- **Weighted F1**: F1-score averaged by class support (accounts for imbalance).  
 
 
 ## Contact
