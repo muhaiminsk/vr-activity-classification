@@ -332,9 +332,7 @@ Extensive computational resources were needed for hyperparameter adjustment with
 Solution: For quicker iterations, use GPU acceleration and a constrained hyperparameter search space.
 
  
-5. **Preprocessing Consistency:**
-
-Errors occasionally occurred as a result of different preprocessing procedures used for training and testing datasets.
+5. **Preprocessing Consistency:** Errors occasionally occurred as a result of different preprocessing procedures used for training and testing datasets.
 
 Solution: Automated validation tests and standardized preprocessing methods were the solutions.
 
