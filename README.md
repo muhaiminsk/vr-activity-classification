@@ -341,6 +341,9 @@ Solution: Automated validation tests and standardized preprocessing methods were
 ### **Test Results**
 
 **Evaluation Metrics**
+- **Test Accuracy**: The average of the overall accuracy.
+- **Macro F1**: Unweighted average of F1-scores across all classes.  
+- **Weighted F1**: F1-score averaged by class support (accounts for imbalance).  
 
 | Metric             | Value   |
 |--------------------|---------|
@@ -368,10 +371,9 @@ Solution: Automated validation tests and standardized preprocessing methods were
 
 
 
-**Notes**:  
 
-- **Macro F1**: Unweighted average of F1-scores across all classes.  
-- **Weighted F1**: F1-score averaged by class support (accounts for imbalance).  
+
+
 
 
 ## Contact
